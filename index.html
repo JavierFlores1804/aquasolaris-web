@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aqua Solaris — Agua y energía solar para comunidades del Perú</title>
+<meta name="description" content="Aqua Solaris es una asociación civil sin fines de lucro (ONG) peruana que implementa proyectos de agua sostenible, saneamiento y energía solar para comunidades rurales y campesinas. Conoce nuestros fines y cómo donar.">
+<meta name="keywords" content="ONG Perú, agua sostenible, energía solar, comunidades rurales, Aqua Solaris, donaciones ONG, Los Olivos Lima">
+<meta name="author" content="Aqua Solaris">
+<link rel="canonical" href="https://www.aquasolaris.org/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aqua Solaris — Agua y energía solar para comunidades del Perú">
+<meta property="og:description" content="ONG peruana dedicada al agua sostenible, saneamiento y energía solar para comunidades rurales y campesinas.">
+<meta property="og:url" content="https://www.aquasolaris.org/">
+<meta property="og:locale" content="es_PE">
+<meta property="og:site_name" content="Aqua Solaris">
+<meta property="og:image" content="https://www.aquasolaris.org/og-cover.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aqua Solaris — Agua y energía solar para comunidades del Perú">
+<meta name="twitter:description" content="ONG peruana dedicada al agua sostenible, saneamiento y energía solar para comunidades rurales y campesinas.">
+<meta name="twitter:image" content="https://www.aquasolaris.org/og-cover.png">
+
+<!-- Structured data: NGO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Aqua Solaris",
+  "alternateName": "Asociación Civil Aqua Solaris",
+  "url": "https://www.aquasolaris.org/",
+  "description": "Asociación civil sin fines de lucro peruana dedicada a la gestión sostenible del agua y al desarrollo de proyectos de energía solar para comunidades rurales.",
+  "foundingDate": "2025-01-20",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Los Olivos",
+    "addressRegion": "Lima",
+    "addressCountry": "PE"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Javier Eduardo Flores Velásquez"
+  }
+}
+</script>
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48x48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<style>
+  :root{
+    --ink:#0f2438;
+    --paper:#f8fafb;
+    --paper-2:#eef3f6;
+    --water:#146b96;
+    --water-deep:#0a3454;
+    --sun:#f7941e;
+    --sun-gold:#fdb933;
+    --clay:#ee5a29;
+    --line: rgba(15,36,56,0.12);
+    --radius: 3px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Work Sans", "Inter", system-ui, sans-serif;
+    font-size:17px;
+    line-height:1.6;
+  }
+  h1,h2,h3,.display{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    margin:0 0 0.4em;
+  }
+  .mono{ font-family:"IBM Plex Mono", ui-monospace, monospace; }
+  a{ color:inherit; }
+  img{max-width:100%;display:block;}
+  .container{ max-width:1120px; margin:0 auto; padding:0 28px; }
+
+  /* skip link */
+  .skip-link{position:absolute; left:-999px; top:0; background:var(--sun); color:var(--water-deep); padding:10px 16px; z-index:100;}
+  .skip-link:focus{ left:12px; top:12px; }
+
+  /* NAV */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(242,236,224,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{ display:flex; align-items:center; justify-content:space-between; padding:16px 0; }
+  .brand{ display:flex; align-items:center; gap:10px; font-family:"Fraunces",serif; font-weight:600; font-size:1.25rem; text-decoration:none;}
+  .brand svg{ width:34px; height:34px; flex:none; }
+  nav.links{ display:flex; gap:26px; align-items:center; }
+  nav.links a{ text-decoration:none; font-size:0.95rem; color:var(--water-deep); border-bottom:2px solid transparent; padding-bottom:2px; }
+  nav.links a:hover{ border-color:var(--sun); }
+  .lang-toggle{
+    display:flex; border:1px solid var(--water-deep); border-radius:20px; overflow:hidden; font-family:"IBM Plex Mono",monospace; font-size:0.78rem;
+  }
+  .lang-toggle button{
+    border:none; background:transparent; padding:6px 12px; cursor:pointer; color:var(--water-deep); font-family:inherit;
+  }
+  .lang-toggle button.active{ background:var(--water-deep); color:var(--paper); }
+  .nav-cta{
+    background:var(--clay); color:var(--paper); text-decoration:none; padding:9px 18px; border-radius:20px; font-size:0.9rem; font-weight:600;
+  }
+  .menu-toggle{ display:none; }
+
+  /* HERO */
+  .hero{ position:relative; overflow:hidden; padding-top:64px; }
+  .hero-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center; padding-bottom:40px;}
+  .eyebrow{
+    font-family:"IBM Plex Mono", monospace; text-transform:uppercase; letter-spacing:0.12em; font-size:0.78rem; color:var(--clay); margin-bottom:14px; display:block;
+  }
+  .hero h1{ font-size:clamp(2.2rem, 4.4vw, 3.4rem); color:var(--water-deep); line-height:1.05; }
+  .hero p.lead{ font-size:1.12rem; max-width:46ch; color:#33454b; }
+  .hero-actions{ display:flex; gap:14px; margin-top:26px; flex-wrap:wrap; }
+  .btn{
+    display:inline-block; text-decoration:none; font-weight:600; padding:13px 24px; border-radius:24px; font-size:0.98rem; transition:transform .15s ease;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-primary{ background:var(--sun); color:var(--water-deep); }
+  .btn-ghost{ border:1.5px solid var(--water-deep); color:var(--water-deep); }
+
+  /* signature SVG scene: terraces + water + sun */
+  .scene{ width:100%; height:auto; }
+
+  /* Divider terraces */
+  .terrace-divider{ display:block; width:100%; height:60px; margin-top:-2px; }
+
+  section{ padding:78px 0; }
+  .section-dark{ background:var(--water-deep); color:var(--paper); }
+  .section-dark h2{ color:var(--paper); }
+  .section-clay{ background:var(--paper-2); }
+
+  .kicker{ font-family:"IBM Plex Mono",monospace; text-transform:uppercase; font-size:0.76rem; letter-spacing:0.12em; color:var(--clay); }
+  .section-dark .kicker{ color:var(--sun); }
+
+  h2.section-title{ font-size:clamp(1.7rem,3vw,2.3rem); max-width:20ch; }
+
+  /* about */
+  .about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; margin-top:34px; }
+  .fact-list{ list-style:none; margin:0; padding:0; display:grid; gap:14px; font-family:"IBM Plex Mono",monospace; font-size:0.92rem; }
+  .fact-list li{ display:flex; gap:12px; border-top:1px solid var(--line); padding-top:12px; }
+  .fact-list b{ color:var(--clay); min-width:130px; display:inline-block; }
+
+  /* fines grid */
+  .fines-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:22px; margin-top:40px; }
+  .fine-card{ background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); padding:26px; position:relative;}
+  .fine-tag{ font-family:"IBM Plex Mono",monospace; font-size:0.78rem; color:var(--sun); background:var(--water-deep); display:inline-block; padding:3px 9px; border-radius:12px; margin-bottom:14px; }
+  .fine-card h3{ font-size:1.08rem; margin-bottom:8px; }
+  .fine-card p{ font-size:0.94rem; color:#3c4b50; margin:0; }
+
+  /* stats */
+  .stats-bar{ display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin-top:44px; }
+  .stat b{ display:block; font-family:"Fraunces",serif; font-size:2.1rem; color:var(--sun); }
+  .stat span{ font-family:"IBM Plex Mono",monospace; font-size:0.8rem; opacity:0.85; }
+
+  .activity-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:36px; }
+  .activity-card{ background:rgba(248,250,251,0.06); border:1px solid rgba(248,250,251,0.16); border-radius:var(--radius); padding:22px; }
+  .activity-card h3{ font-size:1rem; color:var(--sun); margin-bottom:8px; }
+  .activity-card p{ font-size:0.9rem; opacity:0.9; margin:0; }
+
+  /* photo gallery placeholders — replace background-image with real photos */
+  .gallery-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:38px; }
+  .photo-box{
+    position:relative; aspect-ratio:4/5; border-radius:var(--radius); overflow:hidden;
+    background:linear-gradient(160deg, var(--water) 0%, var(--water-deep) 65%);
+    display:flex; align-items:flex-end; isolation:isolate;
+  }
+  .photo-box.tone-sun{ background:linear-gradient(160deg, var(--sun) 0%, var(--clay) 75%); }
+  .photo-box img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
+  .photo-box::after{
+    content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(10,20,30,0.72) 0%, rgba(10,20,30,0.05) 55%); z-index:1;
+  }
+  .photo-box .photo-label{ position:relative; z-index:2; padding:18px; color:var(--paper); font-family:"IBM Plex Mono",monospace; font-size:0.82rem; }
+  .photo-box .photo-icon{ position:absolute; top:16px; left:16px; z-index:2; opacity:0.85; }
+
+  /* about photo */
+  .about-photo{ aspect-ratio:1/1; border-radius:var(--radius); overflow:hidden; background:linear-gradient(160deg, var(--water) 0%, var(--water-deep) 100%); position:relative; }
+  .about-photo img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+
+  /* donate */
+  .donate-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:40px; }
+  .donate-card{ background:var(--water); color:var(--paper); border-radius:var(--radius); padding:28px; }
+  .donate-card h3{ color:var(--sun); font-size:1.1rem; }
+  .donate-card p{ font-size:0.92rem; opacity:0.92; }
+  .donate-card .btn{ margin-top:14px; }
+  .note-box{ margin-top:34px; border-left:3px solid var(--clay); padding:14px 20px; background:var(--paper); font-size:0.92rem; }
+
+  .social-row{ display:flex; flex-wrap:wrap; gap:12px; }
+  .social-link{
+    display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--water-deep);
+    background:var(--paper); border:1px solid var(--line); padding:10px 16px; border-radius:24px; font-size:0.9rem; font-weight:600;
+  }
+  .social-link:hover{ border-color:var(--clay); color:var(--clay); }
+
+  /* contact / footer */
+  footer{ background:var(--water-deep); color:var(--paper); padding:56px 0 30px; }
+  .footer-grid{ display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:40px; }
+  footer h4{ font-family:"IBM Plex Mono",monospace; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--sun); margin-bottom:14px; }
+  footer a{ text-decoration:none; color:var(--paper); opacity:0.85; }
+  footer a:hover{ opacity:1; text-decoration:underline; }
+  .footer-bottom{ margin-top:44px; padding-top:22px; border-top:1px solid rgba(242,236,224,0.15); font-size:0.82rem; opacity:0.7; font-family:"IBM Plex Mono",monospace; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+
+  [data-i18n], [data-i18n-html]{ }
+
+  @media (max-width: 880px){
+    nav.links{ display:none; }
+    .hero-grid{ grid-template-columns:1fr; }
+    .about-grid{ grid-template-columns:1fr; gap:30px; }
+    .fines-grid{ grid-template-columns:1fr 1fr; }
+    .donate-grid{ grid-template-columns:1fr; }
+    .stats-bar{ grid-template-columns:1fr 1fr; }
+    .footer-grid{ grid-template-columns:1fr; gap:28px; }
+  }
+  @media (max-width: 560px){
+    .fines-grid{ grid-template-columns:1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .btn{ transition:none; }
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Saltar al contenido / Skip to content</a>
+
+<header class="site">
+  <div class="container nav-row">
+    <a class="brand" href="#top">
+      <img src="logo.jpeg" alt="Aqua Solaris" style="height:44px; width:auto; border-radius:4px;">
+    </a>
+    <nav class="links" aria-label="Principal">
+      <a href="#mision" data-i18n="nav_about">Quiénes somos</a>
+      <a href="#fines" data-i18n="nav_fines">Nuestros fines</a>
+      <a href="#proyectos" data-i18n="nav_projects">Proyectos</a>
+      <a href="#transparencia" data-i18n="nav_trans">Transparencia</a>
+      <a href="#dona" data-i18n="nav_donate">Donar</a>
+      <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:14px;">
+      <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+        <button type="button" id="btn-es" class="active" onclick="setLang('es')">ES</button>
+        <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+      <a class="nav-cta" href="#dona" data-i18n="nav_cta">Donar ahora</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow" data-i18n="hero_eyebrow">ONG registrada en SUNARP · Perú</span>
+        <h1 data-i18n="hero_title">Agua que llega. Sol que alimenta.</h1>
+        <p class="lead" data-i18n="hero_lead">Aqua Solaris es una asociación civil sin fines de lucro que implementa proyectos de agua sostenible, saneamiento y energía solar en comunidades rurales y campesinas del Perú.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#dona" data-i18n="hero_cta1">Quiero donar</a>
+          <a class="btn btn-ghost" href="#mision" data-i18n="hero_cta2">Conoce la asociación</a>
+        </div>
+      </div>
+      <div style="position:relative;">
+        <svg class="scene" viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true" style="position:absolute; inset:0; z-index:0;">
+          <circle cx="330" cy="90" r="150" fill="url(#sunGlow)"/>
+          <path d="M0 250 Q120 225 240 250 T480 250 V380 H0 Z" fill="#0a3454" opacity="0.10"/>
+          <path d="M0 285 Q120 265 240 285 T480 285 V380 H0 Z" fill="#146b96" opacity="0.14"/>
+          <path d="M0 315 Q120 300 240 315 T480 315 V380 H0 Z" fill="#f7941e" opacity="0.10"/>
+          <defs>
+            <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#fdb933" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#fdb933" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+        </svg>
+        <img src="logo.jpeg" alt="Logotipo de Aqua Solaris: sol sobre olas de agua" style="position:relative; z-index:1; width:100%; max-width:420px; margin:0 auto; display:block;">
+      </div>
+    </div>
+  </section>
+
+  <section id="mision">
+    <div class="container">
+      <span class="kicker" data-i18n="about_kicker">Quiénes somos</span>
+      <h2 class="section-title" data-i18n="about_title">Una asociación civil constituida para gestionar el agua y llevar energía limpia al campo</h2>
+      <div class="about-grid">
+        <p data-i18n="about_body">Aqua Solaris fue fundada el 20 de enero de 2025 en Lima, Perú, e inscrita en la Superintendencia Nacional de los Registros Públicos (SUNARP) como asociación civil sin fines de lucro, en la modalidad de Organismo No Gubernamental (ONG). Nuestros servicios de ayuda son gratuitos, con especial atención a mujeres, niñas, niños y personas en situación de vulnerabilidad.</p>
+        <div>
+          <!-- Reemplaza con: <img src="images/foto-comunidad.jpg" alt="Comunidad rural beneficiaria"> -->
+          <div class="about-photo">
+            <img src="images/foto-comunidad.jpg" alt="Comunidad rural beneficiaria de Aqua Solaris" onerror="this.style.display='none'; this.parentElement.querySelector('.photo-fallback').style.display='flex';">
+            <div class="photo-fallback" style="display:flex; position:absolute; inset:0; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--paper); font-family:'IBM Plex Mono',monospace; font-size:0.8rem; text-align:center; padding:20px;">
+              <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-5 5-3-3-5 5"/></svg>
+              <span data-i18n="photo_placeholder_1">Coloca aquí: images/foto-comunidad.jpg</span>
+            </div>
+          </div>
+          <ul class="fact-list" style="margin-top:20px;">
+            <li><b data-i18n="fact1_k">Fundación</b><span data-i18n="fact1_v">20 de enero de 2025, Lima – Perú</span></li>
+            <li><b data-i18n="fact2_k">Registro público</b><span>SUNARP · Partida N.º 15856006</span></li>
+            <li><b data-i18n="fact3_k">Domicilio</b><span data-i18n="fact3_v">Distrito de Los Olivos, Lima</span></li>
+            <li><b data-i18n="fact4_k">Duración</b><span data-i18n="fact4_v">Indefinida</span></li>
+            <li><b data-i18n="fact5_k">Presidencia</b><span>Javier Eduardo Flores Velásquez</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fines" class="section-clay">
+    <div class="container">
+      <span class="kicker" data-i18n="fines_kicker">Estatuto, Artículo Cuarto</span>
+      <h2 class="section-title" data-i18n="fines_title">Nuestros fines</h2>
+      <div class="fines-grid">
+        <div class="fine-card">
+          <span class="fine-tag">A</span>
+          <h3 data-i18n="fine_a_t">Uso sostenible del agua</h3>
+          <p data-i18n="fine_a_p">Implementar y gestionar proyectos para la distribución equitativa del agua potable y sistemas de riego eficientes.</p>
+        </div>
+        <div class="fine-card">
+          <span class="fine-tag">B</span>
+          <h3 data-i18n="fine_b_t">Calidad del agua</h3>
+          <p data-i18n="fine_b_p">Desarrollar programas de purificación y conservación del agua en comunidades necesitadas.</p>
+        </div>
+        <div class="fine-card">
+          <span class="fine-tag">C</span>
+          <h3 data-i18n="fine_c_t">Energía solar</h3>
+          <p data-i18n="fine_c_p">Implementar sistemas de energía solar en comunidades rurales para reducir la dependencia de fuentes no renovables.</p>
+        </div>
+        <div class="fine-card">
+          <span class="fine-tag">D</span>
+          <h3 data-i18n="fine_d_t">Educación y sensibilización</h3>
+          <p data-i18n="fine_d_p">Talleres y capacitaciones sobre el uso eficiente del agua y la energía solar.</p>
+        </div>
+        <div class="fine-card">
+          <span class="fine-tag">E</span>
+          <h3 data-i18n="fine_e_t">Innovación y tecnología</h3>
+          <p data-i18n="fine_e_p">Fomentar la investigación y el desarrollo de tecnologías innovadoras en agua y energía solar.</p>
+        </div>
+        <div class="fine-card">
+          <span class="fine-tag">F</span>
+          <h3 data-i18n="fine_f_t">Infraestructura de riego</h3>
+          <p data-i18n="fine_f_p">Obras que mejoren el riego de los campos de cultivo y la alimentación de las comunidades campesinas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <span class="kicker" data-i18n="gallery_kicker">Nuestro trabajo en imágenes</span>
+      <h2 class="section-title" data-i18n="gallery_title">Así se ve el agua y el sol trabajando juntos</h2>
+      <div class="gallery-grid">
+        <div class="photo-box">
+          <!-- Reemplaza con: <img src="images/foto-agua.jpg" alt="..."> -->
+          <img src="images/foto-agua.jpg" alt="Proyecto de agua y riego" onerror="this.style.display='none';">
+          <span class="photo-label" data-i18n="gallery_1">Agua y riego · images/foto-agua.jpg</span>
+        </div>
+        <div class="photo-box tone-sun">
+          <img src="images/foto-solar.jpg" alt="Paneles solares en comunidad rural" onerror="this.style.display='none';">
+          <span class="photo-label" data-i18n="gallery_2">Energía solar · images/foto-solar.jpg</span>
+        </div>
+        <div class="photo-box">
+          <img src="images/foto-agricultura.jpg" alt="Terrazas de cultivo andinas" onerror="this.style.display='none';">
+          <span class="photo-label" data-i18n="gallery_3">Agricultura andina · images/foto-agricultura.jpg</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos" class="section-dark">
+    <div class="container">
+      <span class="kicker" data-i18n="proj_kicker">Cómo trabajamos</span>
+      <h2 class="section-title" data-i18n="proj_title">Del acceso al agua a la energía que sostiene a una comunidad</h2>
+      <p style="max-width:60ch; opacity:0.9;" data-i18n="proj_lead">Impulsamos el acceso universal y equitativo al agua potable, el saneamiento, la protección de ecosistemas hídricos y la cooperación con comunidades locales, según lo establecido en nuestro estatuto fundacional.</p>
+      <div class="stats-bar">
+        <div class="stat"><b>2025</b><span data-i18n="stat1">Año de fundación</span></div>
+        <div class="stat"><b class="mono">ONG</b><span data-i18n="stat2">Sin fines de lucro</span></div>
+        <div class="stat"><b>3</b><span data-i18n="stat3">Fines estatutarios principales: agua, calidad y energía solar</span></div>
+        <div class="stat"><b class="mono">100%</b><span data-i18n="stat4">De los servicios son gratuitos para las comunidades</span></div>
+      </div>
+
+      <div class="activity-grid">
+        <div class="activity-card">
+          <h3 data-i18n="act1_t">Agua potable para todos</h3>
+          <p data-i18n="act1_p">Trabajamos por el acceso universal y equitativo al agua potable, priorizando a las comunidades más vulnerables.</p>
+        </div>
+        <div class="activity-card">
+          <h3 data-i18n="act2_t">Saneamiento e higiene</h3>
+          <p data-i18n="act2_p">Impulsamos el acceso a servicios de saneamiento adecuados y estrategias para poner fin a la defecación al aire libre.</p>
+        </div>
+        <div class="activity-card">
+          <h3 data-i18n="act3_t">Reducción de la contaminación</h3>
+          <p data-i18n="act3_p">Buscamos reducir a la mitad el porcentaje de aguas residuales sin tratar y aumentar el reciclado y la reutilización segura del agua.</p>
+        </div>
+        <div class="activity-card">
+          <h3 data-i18n="act4_t">Uso eficiente del agua</h3>
+          <p data-i18n="act4_p">Promovemos el uso eficiente de los recursos hídricos en todos los sectores y una gestión integrada, incluso mediante cooperación transfronteriza.</p>
+        </div>
+        <div class="activity-card">
+          <h3 data-i18n="act5_t">Protección de ecosistemas</h3>
+          <p data-i18n="act5_p">Protegemos y restablecemos los ecosistemas relacionados con el agua: bosques, montañas, humedales, ríos, acuíferos y lagos.</p>
+        </div>
+        <div class="activity-card">
+          <h3 data-i18n="act6_t">Cooperación y alianzas</h3>
+          <p data-i18n="act6_p">Ampliamos la cooperación internacional y fortalecemos la participación de las comunidades locales en la gestión del agua.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-clay">
+    <div class="container">
+      <span class="kicker" data-i18n="help_kicker">Involúcrate</span>
+      <h2 class="section-title" data-i18n="help_title">Cómo puedes ayudar</h2>
+      <div class="fines-grid">
+        <div class="fine-card">
+          <span class="fine-tag mono">01</span>
+          <h3 data-i18n="help1_t">Donaciones</h3>
+          <p data-i18n="help1_p">Tu aporte financia directamente los proyectos de agua y energía solar de la asociación.</p>
+        </div>
+        <div class="fine-card">
+          <span class="fine-tag mono">02</span>
+          <h3 data-i18n="help2_t">Voluntariado</h3>
+          <p data-i18n="help2_p">Súmate con tu tiempo y habilidades a la implementación de proyectos y campañas.</p>
+        </div>
+        <div class="fine-card">
+          <span class="fine-tag mono">03</span>
+          <h3 data-i18n="help3_t">Difusión</h3>
+          <p data-i18n="help3_p">Comparte nuestro trabajo en redes sociales para ampliar el alcance de cada campaña.</p>
+        </div>
+        <div class="fine-card">
+          <span class="fine-tag mono">04</span>
+          <h3 data-i18n="help4_t">Alianzas estratégicas</h3>
+          <p data-i18n="help4_p">Representas una empresa, gobierno u otra ONG? Conversemos sobre cómo colaborar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="transparencia" class="section-dark">
+    <div class="container">
+      <span class="kicker" data-i18n="trans_kicker">Transparencia</span>
+      <h2 class="section-title" data-i18n="trans_title">Así se destinan los fondos, según nuestro propio estatuto</h2>
+      <p style="max-width:62ch; opacity:0.9;" data-i18n="trans_lead">El Artículo Sexto de nuestros estatutos establece que el patrimonio de Aqua Solaris es irrepartible: ningún asociado ni dirigente puede beneficiarse directa ni indirectamente de él. El Artículo Quinto define además cómo se distribuyen los saldos anuales que forman el fondo de reserva:</p>
+      <div class="activity-grid" style="margin-top:30px;">
+        <div class="activity-card">
+          <h3 class="mono" style="color:var(--sun);">25%</h3>
+          <p data-i18n="trans1">Capacitaciones organizadas por la asociación.</p>
+        </div>
+        <div class="activity-card">
+          <h3 class="mono" style="color:var(--sun);">25%</h3>
+          <p data-i18n="trans2">Publicaciones que difunden el trabajo de la asociación.</p>
+        </div>
+        <div class="activity-card">
+          <h3 class="mono" style="color:var(--sun);">25%</h3>
+          <p data-i18n="trans3">Identificación, formulación y evaluación social de proyectos de saneamiento.</p>
+        </div>
+        <div class="activity-card">
+          <h3 class="mono" style="color:var(--sun);">25%</h3>
+          <p data-i18n="trans4">Talleres de higiene y salud diseñados a medida para las comunidades.</p>
+        </div>
+      </div>
+      <p class="mono" style="opacity:0.7; font-size:0.8rem; margin-top:26px;" data-i18n="trans_note">Fuente: Estatuto de Aqua Solaris, inscrito en SUNARP, Partida N.º 15856006.</p>
+    </div>
+  </section>
+
+  <section id="dona">
+    <div class="container">
+      <span class="kicker" data-i18n="donate_kicker">Apoya nuestra misión</span>
+      <h2 class="section-title" data-i18n="donate_title">Cómo donar</h2>
+      <p style="max-width:60ch;" data-i18n="donate_lead">Todo aporte se destina íntegramente a los fines de la asociación: el patrimonio de Aqua Solaris es irrepartible y no puede beneficiar directa ni indirectamente a sus asociados.</p>
+      <div class="donate-grid">
+        <div class="donate-card">
+          <h3 data-i18n="donate_card1_t">Yape / Plin</h3>
+          <p data-i18n="donate_card1_p">Transferencia inmediata desde cualquier billetera móvil peruana. Sin comisión para quien dona.</p>
+          <div style="width:140px; height:140px; background:rgba(255,255,255,0.08); border:1px dashed rgba(255,255,255,0.4); border-radius:6px; margin:14px 0; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <img id="qr-yape" src="images/qr-yape.png" alt="Código QR de Yape" style="width:100%; height:100%; object-fit:contain;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div style="display:none; flex-direction:column; align-items:center; gap:4px; padding:10px; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:0.7rem; opacity:0.8;">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM19 14h2v2h-2zM14 19h2v2h-2zM19 19h2v2h-2z"/></svg>
+              <span data-i18n="yape_qr_pending">Sube tu QR: images/qr-yape.png</span>
+            </div>
+          </div>
+          <p class="mono" style="opacity:0.9; font-size:0.95rem; font-weight:600;" id="dato-yape-numero">Número pendiente de confirmar</p>
+          <p class="mono" style="opacity:0.7; font-size:0.78rem;" data-i18n="donate_card1_note">Titular: Javier Eduardo Flores Velásquez (representante legal)</p>
+        </div>
+        <div class="donate-card">
+          <h3 data-i18n="donate_card2_t">Transferencia bancaria</h3>
+          <p data-i18n="donate_card2_p">Para donaciones nacionales o internacionales mediante cuenta a nombre de Aqua Solaris.</p>
+          <p class="mono" style="opacity:0.9; font-size:0.85rem; margin:4px 0;" id="dato-banco-nombre" data-i18n="donate_card2_note">Datos de cuenta a confirmar por la asociación</p>
+          <p class="mono" style="opacity:0.8; font-size:0.8rem; margin:2px 0;" id="dato-banco-cuenta"></p>
+          <p class="mono" style="opacity:0.8; font-size:0.8rem; margin:2px 0;" id="dato-banco-cci"></p>
+        </div>
+        <div class="donate-card">
+          <h3 data-i18n="donate_card3_t">PayPal</h3>
+          <p data-i18n="donate_card3_p">Ideal para donantes internacionales. PayPal cobra una pequeña comisión por transacción, no por uso del servicio.</p>
+          <p class="mono" style="opacity:0.75; font-size:0.8rem;" data-i18n="paypal_pending">En trámite — disponible próximamente</p>
+          <a class="btn" href="#" id="paypal-link" style="border:1.5px solid rgba(255,255,255,0.5); color:var(--paper); opacity:0.7; pointer-events:none;" data-i18n="donate_card3_btn">Próximamente</a>
+        </div>
+      </div>
+      <div class="note-box" data-i18n="donate_note">Nota: los métodos de pago (Yape/Plin, banco, PayPal) no tienen costo de configuración, pero PayPal y las pasarelas de tarjeta cobran una comisión por cada transacción procesada — esto lo determina el proveedor de pago, no la asociación.</div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section-clay">
+    <div class="container">
+      <span class="kicker" data-i18n="contact_kicker">Hablemos</span>
+      <h2 class="section-title" data-i18n="contact_title">Contacto</h2>
+      <div class="about-grid">
+        <p data-i18n="contact_body">Si representas una fuente donante, una institución cooperante o una comunidad interesada en un proyecto, escríbenos. Respondemos personalmente cada mensaje.</p>
+        <ul class="fact-list">
+          <li><b data-i18n="contact_email_k">Correo</b><span>info@aquasolaris.org</span></li>
+          <li><b data-i18n="contact_phone_k">Teléfono</b><span id="dato-telefono" data-i18n="contact_phone_v">Pendiente de confirmar</span></li>
+          <li><b data-i18n="contact_loc_k">Ubicación</b><span data-i18n="contact_loc_v">Los Olivos, Lima, Perú</span></li>
+        </ul>
+      </div>
+
+      <div style="margin-top:46px;">
+        <span class="kicker" data-i18n="social_kicker">Síguenos</span>
+        <h3 style="margin-top:6px;" data-i18n="social_title">Nuestras redes sociales</h3>
+        <p style="max-width:60ch; margin-bottom:20px;" data-i18n="social_lead">Aquí compartimos avances de proyectos, testimonios de comunidades e historias de donantes. Son también nuestro principal canal para captar fondos.</p>
+        <div class="social-row">
+          <a class="social-link" href="#" data-network="tiktok" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.02 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>
+            <span data-i18n="social_tiktok">TikTok</span>
+          </a>
+          <a class="social-link" href="#" data-network="instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.21.6 1.76 1.15.5.5.9 1.1 1.15 1.76.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.76 4.9 4.9 0 0 1-1.76 1.15c-.64.25-1.37.42-2.43.47C15.06 21.99 14.72 22 12 22s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.76-1.15 4.9 4.9 0 0 1-1.15-1.76c-.25-.64-.42-1.37-.47-2.43C1.01 15.06 1 14.72 1 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.21 1.15-1.76a4.9 4.9 0 0 1 1.76-1.15c.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.28 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.4-8.4a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4z"/></svg>
+            <span data-i18n="social_instagram">Instagram</span>
+          </a>
+          <a class="social-link" href="#" data-network="facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+            <span data-i18n="social_facebook">Facebook</span>
+          </a>
+          <a class="social-link" href="#" data-network="youtube" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M21.58 7.19a2.5 2.5 0 0 0-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.82.42a2.5 2.5 0 0 0-1.76 1.77A26 26 0 0 0 2 12a26 26 0 0 0 .42 4.81 2.5 2.5 0 0 0 1.76 1.77C5.75 19 12 19 12 19s6.25 0 7.82-.42a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.42-4.81zM10 15V9l5.2 3-5.2 3z"/></svg>
+            <span data-i18n="social_youtube">YouTube</span>
+          </a>
+          <a class="social-link" href="#" data-network="whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12.02 2C6.5 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.08-1.33A9.96 9.96 0 0 0 12.02 22C17.52 22 22 17.52 22 12S17.52 2 12.02 2zm5.87 14.1c-.25.7-1.45 1.34-2 1.42-.53.08-1.2.11-1.94-.12-.45-.14-1.02-.32-1.76-.63-3.1-1.34-5.12-4.46-5.28-4.67-.15-.21-1.26-1.68-1.26-3.2s.8-2.28 1.08-2.6c.28-.31.6-.39.8-.39.2 0 .4 0 .58.01.19.01.44-.07.68.53.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.61.17.3.76 1.26 1.64 2.04 1.13.99 2.08 1.3 2.38 1.45.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.24.66-.14.27.1 1.72.81 2.02.96.3.15.5.22.57.35.08.13.08.72-.17 1.42z"/></svg>
+            <span data-i18n="social_whatsapp">WhatsApp</span>
+          </a>
+        </div>
+        <p class="mono" style="opacity:0.7; font-size:0.82rem; margin-top:14px;" data-i18n="social_note">Enlaces a completar con tus cuentas reales.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <a class="brand" href="#top" style="margin-bottom:10px;">
+        <span style="background:#fff; border-radius:6px; padding:6px 10px; display:inline-flex;">
+          <img src="logo.jpeg" alt="Aqua Solaris" style="height:32px; width:auto; display:block;">
+        </span>
+      </a>
+      <p style="opacity:0.85; max-width:36ch; font-size:0.92rem;" data-i18n="footer_desc">Asociación civil sin fines de lucro peruana. Agua sostenible, saneamiento y energía solar para comunidades rurales.</p>
+    </div>
+    <div>
+      <h4 data-i18n="footer_nav">Navegación</h4>
+      <ul style="list-style:none; padding:0; margin:0; display:grid; gap:8px;">
+        <li><a href="#mision" data-i18n="nav_about">Quiénes somos</a></li>
+        <li><a href="#fines" data-i18n="nav_fines">Nuestros fines</a></li>
+        <li><a href="#transparencia" data-i18n="nav_trans">Transparencia</a></li>
+        <li><a href="#dona" data-i18n="nav_donate">Donar</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 data-i18n="footer_legal">Legal</h4>
+      <p style="font-size:0.85rem; opacity:0.85;" data-i18n="footer_legal_text">Inscrita en SUNARP, Zona Registral N.º IX – Sede Lima, Partida N.º 15856006.</p>
+      <p style="font-size:0.78rem; opacity:0.7; margin-top:10px;" data-i18n="footer_privacy_text">Este sitio no usa cookies de seguimiento. Solo guarda tu preferencia de idioma (ES/EN) en tu propio navegador.</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> Aqua Solaris</span>
+    <span data-i18n="footer_made">Los Olivos, Lima, Perú</span>
+  </div>
+</footer>
+
+<script src="contenido.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const i18n = {
+    es: {
+      nav_about:"Quiénes somos", nav_fines:"Nuestros fines", nav_projects:"Proyectos", nav_trans:"Transparencia", nav_donate:"Donar", nav_contact:"Contacto", nav_cta:"Donar ahora",
+      hero_eyebrow:"ONG registrada en SUNARP · Perú",
+      hero_title:"Agua que llega. Sol que alimenta.",
+      hero_lead:"Aqua Solaris es una asociación civil sin fines de lucro que implementa proyectos de agua sostenible, saneamiento y energía solar en comunidades rurales y campesinas del Perú.",
+      hero_cta1:"Quiero donar", hero_cta2:"Conoce la asociación",
+      about_kicker:"Quiénes somos",
+      about_title:"Una asociación civil constituida para gestionar el agua y llevar energía limpia al campo",
+      about_body:"Aqua Solaris fue fundada el 20 de enero de 2025 en Lima, Perú, e inscrita en la Superintendencia Nacional de los Registros Públicos (SUNARP) como asociación civil sin fines de lucro, en la modalidad de Organismo No Gubernamental (ONG). Nuestros servicios de ayuda son gratuitos, con especial atención a mujeres, niñas, niños y personas en situación de vulnerabilidad.",
+      fact1_k:"Fundación", fact1_v:"20 de enero de 2025, Lima – Perú",
+      fact2_k:"Registro público", fact3_k:"Domicilio", fact3_v:"Distrito de Los Olivos, Lima",
+      fact4_k:"Duración", fact4_v:"Indefinida", fact5_k:"Presidencia",
+      fines_kicker:"Estatuto, Artículo Cuarto", fines_title:"Nuestros fines",
+      fine_a_t:"Uso sostenible del agua", fine_a_p:"Implementar y gestionar proyectos para la distribución equitativa del agua potable y sistemas de riego eficientes.",
+      fine_b_t:"Calidad del agua", fine_b_p:"Desarrollar programas de purificación y conservación del agua en comunidades necesitadas.",
+      fine_c_t:"Energía solar", fine_c_p:"Implementar sistemas de energía solar en comunidades rurales para reducir la dependencia de fuentes no renovables.",
+      fine_d_t:"Educación y sensibilización", fine_d_p:"Talleres y capacitaciones sobre el uso eficiente del agua y la energía solar.",
+      fine_e_t:"Innovación y tecnología", fine_e_p:"Fomentar la investigación y el desarrollo de tecnologías innovadoras en agua y energía solar.",
+      fine_f_t:"Infraestructura de riego", fine_f_p:"Obras que mejoren el riego de los campos de cultivo y la alimentación de las comunidades campesinas.",
+      photo_placeholder_1:"Coloca aquí: images/foto-comunidad.jpg",
+      gallery_kicker:"Nuestro trabajo en imágenes", gallery_title:"Así se ve el agua y el sol trabajando juntos",
+      gallery_1:"Agua y riego · images/foto-agua.jpg", gallery_2:"Energía solar · images/foto-solar.jpg", gallery_3:"Agricultura andina · images/foto-agricultura.jpg",
+      proj_kicker:"Cómo trabajamos", proj_title:"Del acceso al agua a la energía que sostiene a una comunidad",
+      proj_lead:"Impulsamos el acceso universal y equitativo al agua potable, el saneamiento, la protección de ecosistemas hídricos y la cooperación con comunidades locales, según lo establecido en nuestro estatuto fundacional.",
+      stat1:"Año de fundación", stat2:"Sin fines de lucro", stat3:"Fines estatutarios principales: agua, calidad y energía solar", stat4:"De los servicios son gratuitos para las comunidades",
+      act1_t:"Agua potable para todos", act1_p:"Trabajamos por el acceso universal y equitativo al agua potable, priorizando a las comunidades más vulnerables.",
+      act2_t:"Saneamiento e higiene", act2_p:"Impulsamos el acceso a servicios de saneamiento adecuados y estrategias para poner fin a la defecación al aire libre.",
+      act3_t:"Reducción de la contaminación", act3_p:"Buscamos reducir a la mitad el porcentaje de aguas residuales sin tratar y aumentar el reciclado y la reutilización segura del agua.",
+      act4_t:"Uso eficiente del agua", act4_p:"Promovemos el uso eficiente de los recursos hídricos en todos los sectores y una gestión integrada, incluso mediante cooperación transfronteriza.",
+      act5_t:"Protección de ecosistemas", act5_p:"Protegemos y restablecemos los ecosistemas relacionados con el agua: bosques, montañas, humedales, ríos, acuíferos y lagos.",
+      act6_t:"Cooperación y alianzas", act6_p:"Ampliamos la cooperación internacional y fortalecemos la participación de las comunidades locales en la gestión del agua.",
+      help_kicker:"Involúcrate", help_title:"Cómo puedes ayudar",
+      help1_t:"Donaciones", help1_p:"Tu aporte financia directamente los proyectos de agua y energía solar de la asociación.",
+      help2_t:"Voluntariado", help2_p:"Súmate con tu tiempo y habilidades a la implementación de proyectos y campañas.",
+      help3_t:"Difusión", help3_p:"Comparte nuestro trabajo en redes sociales para ampliar el alcance de cada campaña.",
+      help4_t:"Alianzas estratégicas", help4_p:"¿Representas una empresa, gobierno u otra ONG? Conversemos sobre cómo colaborar.",
+      trans_kicker:"Transparencia", trans_title:"Así se destinan los fondos, según nuestro propio estatuto",
+      trans_lead:"El Artículo Sexto de nuestros estatutos establece que el patrimonio de Aqua Solaris es irrepartible: ningún asociado ni dirigente puede beneficiarse directa ni indirectamente de él. El Artículo Quinto define además cómo se distribuyen los saldos anuales que forman el fondo de reserva:",
+      trans1:"Capacitaciones organizadas por la asociación.", trans2:"Publicaciones que difunden el trabajo de la asociación.",
+      trans3:"Identificación, formulación y evaluación social de proyectos de saneamiento.", trans4:"Talleres de higiene y salud diseñados a medida para las comunidades.",
+      trans_note:"Fuente: Estatuto de Aqua Solaris, inscrito en SUNARP, Partida N.º 15856006.",
+      donate_kicker:"Apoya nuestra misión", donate_title:"Cómo donar",
+      donate_lead:"Todo aporte se destina íntegramente a los fines de la asociación: el patrimonio de Aqua Solaris es irrepartible y no puede beneficiar directa ni indirectamente a sus asociados.",
+      donate_card1_t:"Yape / Plin", donate_card1_p:"Transferencia inmediata desde cualquier billetera móvil peruana. Sin comisión para quien dona.", donate_card1_note:"Titular: Javier Eduardo Flores Velásquez (representante legal)",
+      yape_qr_pending:"Sube tu QR: images/qr-yape.png",
+      donate_card2_t:"Transferencia bancaria", donate_card2_p:"Para donaciones nacionales o internacionales mediante cuenta a nombre de Aqua Solaris.", donate_card2_note:"Datos de cuenta a confirmar por la asociación",
+      donate_card3_t:"PayPal", donate_card3_p:"Ideal para donantes internacionales. PayPal cobra una pequeña comisión por transacción, no por uso del servicio.", donate_card3_btn:"Próximamente",
+      paypal_pending:"En trámite — disponible próximamente",
+      donate_note:"Nota: los métodos de pago (Yape/Plin, banco, PayPal) no tienen costo de configuración, pero PayPal y las pasarelas de tarjeta cobran una comisión por cada transacción procesada — esto lo determina el proveedor de pago, no la asociación.",
+      contact_kicker:"Hablemos", contact_title:"Contacto",
+      contact_body:"Si representas una fuente donante, una institución cooperante o una comunidad interesada en un proyecto, escríbenos. Respondemos personalmente cada mensaje.",
+      contact_email_k:"Correo", contact_loc_k:"Ubicación", contact_loc_v:"Los Olivos, Lima, Perú",
+      contact_phone_k:"Teléfono", contact_phone_v:"Pendiente de confirmar",
+      social_kicker:"Síguenos", social_title:"Nuestras redes sociales",
+      social_lead:"Aquí compartimos avances de proyectos, testimonios de comunidades e historias de donantes. Son también nuestro principal canal para captar fondos.",
+      social_tiktok:"TikTok", social_instagram:"Instagram", social_facebook:"Facebook", social_youtube:"YouTube", social_whatsapp:"WhatsApp",
+      social_note:"Enlaces a completar con tus cuentas reales.",
+      footer_desc:"Asociación civil sin fines de lucro peruana. Agua sostenible, saneamiento y energía solar para comunidades rurales.",
+      footer_nav:"Navegación", footer_legal:"Legal", footer_legal_text:"Inscrita en SUNARP, Zona Registral N.º IX – Sede Lima, Partida N.º 15856006.",
+      footer_privacy_text:"Este sitio no usa cookies de seguimiento. Solo guarda tu preferencia de idioma (ES/EN) en tu propio navegador.",
+      footer_made:"Los Olivos, Lima, Perú"
+    },
+    en: {
+      nav_about:"About us", nav_fines:"Our mission", nav_projects:"Projects", nav_trans:"Transparency", nav_donate:"Donate", nav_contact:"Contact", nav_cta:"Donate now",
+      hero_eyebrow:"Registered NGO with Peru's public registry (SUNARP)",
+      hero_title:"Water that reaches. Sun that sustains.",
+      hero_lead:"Aqua Solaris is a Peruvian non-profit civil association that implements sustainable water, sanitation and solar energy projects for rural and farming communities.",
+      hero_cta1:"I want to donate", hero_cta2:"Learn about us",
+      about_kicker:"About us",
+      about_title:"A civil association built to manage water and bring clean energy to the countryside",
+      about_body:"Aqua Solaris was founded on January 20, 2025 in Lima, Peru, and registered with Peru's National Superintendency of Public Registries (SUNARP) as a non-profit civil association, in the form of a Non-Governmental Organization (NGO). Our support services are free, with special attention to women, girls, boys and people in vulnerable situations.",
+      fact1_k:"Founded", fact1_v:"January 20, 2025, Lima – Peru",
+      fact2_k:"Public registry", fact3_k:"Address", fact3_v:"Los Olivos District, Lima",
+      fact4_k:"Duration", fact4_v:"Indefinite", fact5_k:"President",
+      fines_kicker:"Bylaws, Article Four", fines_title:"Our mission",
+      fine_a_t:"Sustainable water use", fine_a_p:"Implement and manage projects for equitable distribution of drinking water and efficient irrigation systems.",
+      fine_b_t:"Water quality", fine_b_p:"Develop water purification and conservation programs in communities in need.",
+      fine_c_t:"Solar energy", fine_c_p:"Implement solar energy systems in rural communities to reduce dependence on non-renewable sources.",
+      fine_d_t:"Education and awareness", fine_d_p:"Workshops and training on efficient use of water and solar energy.",
+      fine_e_t:"Innovation and technology", fine_e_p:"Promote research and development of innovative water and solar energy technologies.",
+      fine_f_t:"Irrigation infrastructure", fine_f_p:"Public works that improve irrigation of farmland and food security for farming communities.",
+      photo_placeholder_1:"Place here: images/foto-comunidad.jpg",
+      gallery_kicker:"Our work in pictures", gallery_title:"This is water and sun working together",
+      gallery_1:"Water and irrigation · images/foto-agua.jpg", gallery_2:"Solar energy · images/foto-solar.jpg", gallery_3:"Andean agriculture · images/foto-agricultura.jpg",
+      proj_kicker:"How we work", proj_title:"From water access to the energy that sustains a community",
+      proj_lead:"We drive universal and equitable access to drinking water, sanitation, protection of water ecosystems, and cooperation with local communities, as set out in our founding bylaws.",
+      stat1:"Founding year", stat2:"Non-profit", stat3:"Core statutory goals: water, quality and solar energy", stat4:"Of services are free for communities",
+      act1_t:"Drinking water for everyone", act1_p:"We work toward universal and equitable access to drinking water, prioritizing the most vulnerable communities.",
+      act2_t:"Sanitation and hygiene", act2_p:"We drive access to adequate sanitation services and strategies to end open defecation.",
+      act3_t:"Reducing pollution", act3_p:"We aim to halve the share of untreated wastewater and increase safe recycling and reuse of water.",
+      act4_t:"Efficient water use", act4_p:"We promote efficient use of water resources across all sectors and integrated management, including cross-border cooperation.",
+      act5_t:"Protecting ecosystems", act5_p:"We protect and restore water-related ecosystems: forests, mountains, wetlands, rivers, aquifers and lakes.",
+      act6_t:"Cooperation and partnerships", act6_p:"We expand international cooperation and strengthen local community participation in water management.",
+      help_kicker:"Get involved", help_title:"How you can help",
+      help1_t:"Donations", help1_p:"Your contribution directly funds the association's water and solar energy projects.",
+      help2_t:"Volunteering", help2_p:"Join us with your time and skills to help implement projects and campaigns.",
+      help3_t:"Spread the word", help3_p:"Share our work on social media to widen the reach of each campaign.",
+      help4_t:"Strategic partnerships", help4_p:"Do you represent a company, government agency or another NGO? Let's talk about how to collaborate.",
+      trans_kicker:"Transparency", trans_title:"Where funds go, per our own bylaws",
+      trans_lead:"Article Six of our bylaws states that Aqua Solaris' assets cannot be distributed to, or benefit, any member or director, directly or indirectly. Article Five also defines how annual reserve fund balances are allocated:",
+      trans1:"Trainings and workshops organized by the association.", trans2:"Publications that share the association's work.",
+      trans3:"Identification, design and social evaluation of sanitation projects.", trans4:"Hygiene and health workshops tailored to each community.",
+      trans_note:"Source: Aqua Solaris bylaws, registered with SUNARP, Entry No. 15856006.",
+      donate_kicker:"Support our mission", donate_title:"How to donate",
+      donate_lead:"Every contribution goes fully toward the association's mission: Aqua Solaris' assets cannot be distributed to, or benefit, its members.",
+      donate_card1_t:"Yape / Plin", donate_card1_p:"Instant transfer from any Peruvian mobile wallet. No fee for the donor.", donate_card1_note:"Held by: Javier Eduardo Flores Velásquez (legal representative)",
+      yape_qr_pending:"Upload your QR: images/qr-yape.png",
+      donate_card2_t:"Bank transfer", donate_card2_p:"For domestic or international donations to an account held by Aqua Solaris.", donate_card2_note:"Account details to be confirmed by the association",
+      donate_card3_t:"PayPal", donate_card3_p:"Ideal for international donors. PayPal charges a small fee per transaction, not for using the service.", donate_card3_btn:"Coming soon",
+      paypal_pending:"In progress — available soon",
+      donate_note:"Note: payment methods (Yape/Plin, bank, PayPal) have no setup cost, but PayPal and card processors charge a fee per transaction — this is set by the payment provider, not the association.",
+      contact_kicker:"Get in touch", contact_title:"Contact",
+      contact_body:"If you represent a funding source, a partner institution, or a community interested in a project, write to us. We personally answer every message.",
+      contact_email_k:"Email", contact_loc_k:"Location", contact_loc_v:"Los Olivos, Lima, Peru",
+      contact_phone_k:"Phone", contact_phone_v:"To be confirmed",
+      social_kicker:"Follow us", social_title:"Our social media",
+      social_lead:"Here we share project updates, community stories and donor stories. It's also our main channel for fundraising.",
+      social_tiktok:"TikTok", social_instagram:"Instagram", social_facebook:"Facebook", social_youtube:"YouTube", social_whatsapp:"WhatsApp",
+      social_note:"Links to be completed with your real accounts.",
+      footer_desc:"Peruvian non-profit civil association. Sustainable water, sanitation and solar energy for rural communities.",
+      footer_nav:"Navigation", footer_legal:"Legal", footer_legal_text:"Registered with SUNARP, Registry Zone No. IX – Lima Office, Entry No. 15856006.",
+      footer_privacy_text:"This site uses no tracking cookies. It only stores your language preference (ES/EN) in your own browser.",
+      footer_made:"Los Olivos, Lima, Peru"
+    }
+  };
+
+  function setLang(lang){
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const key = el.getAttribute('data-i18n');
+      if(i18n[lang][key]) el.textContent = i18n[lang][key];
+    });
+    document.documentElement.lang = lang;
+    document.getElementById('btn-es').classList.toggle('active', lang==='es');
+    document.getElementById('btn-en').classList.toggle('active', lang==='en');
+    localStorage.setItem('aquasolaris_lang', lang);
+  }
+  const saved = localStorage.getItem('aquasolaris_lang');
+  if(saved) setLang(saved);
+
+  // Aplica los datos de contenido.js al sitio (contacto, donaciones, redes)
+  function applyDatos(){
+    const d = window.AQUA_SOLARIS_DATOS;
+    if(!d) return;
+
+    // Contacto
+    const tel = document.getElementById('dato-telefono');
+    if(tel && d.contacto.telefono_visible) tel.textContent = d.contacto.telefono_visible;
+
+    const wa = document.querySelector('.social-link[data-network="whatsapp"]');
+    if(wa && d.contacto.whatsapp_numero) wa.href = 'https://wa.me/' + d.contacto.whatsapp_numero;
+
+    // Yape / Plin
+    const yapeNum = document.getElementById('dato-yape-numero');
+    if(yapeNum && d.donaciones.yape_plin_numero) yapeNum.textContent = d.donaciones.yape_plin_numero;
+
+    // Banco
+    const bNombre = document.getElementById('dato-banco-nombre');
+    const bCuenta = document.getElementById('dato-banco-cuenta');
+    const bCci = document.getElementById('dato-banco-cci');
+    if(d.donaciones.banco_nombre && bNombre){
+      bNombre.textContent = 'Banco: ' + d.donaciones.banco_nombre + ' · Titular: Aqua Solaris';
+      if(bCuenta) bCuenta.textContent = 'Cuenta: ' + (d.donaciones.banco_cuenta || '—');
+      if(bCci) bCci.textContent = 'CCI: ' + (d.donaciones.banco_cci || '—');
+    }
+
+    // PayPal
+    const pp = document.getElementById('paypal-link');
+    if(pp && d.donaciones.paypal_link){
+      pp.href = d.donaciones.paypal_link;
+      pp.style.pointerEvents = 'auto';
+      pp.style.opacity = '1';
+      pp.style.border = 'none';
+      pp.style.background = 'var(--sun)';
+      pp.style.color = 'var(--water-deep)';
+      pp.textContent = document.documentElement.lang === 'en' ? 'Donate via PayPal' : 'Donar por PayPal';
+    }
+
+    // Redes sociales
+    const redes = d.redes_sociales || {};
+    Object.keys(redes).forEach(function(net){
+      const link = document.querySelector('.social-link[data-network="' + net + '"]');
+      if(link && redes[net]){
+        link.href = redes[net];
+      } else if(link){
+        link.style.opacity = '0.45';
+      }
+    });
+  }
+  applyDatos();
+</script>
+
+</body>
+</html>
