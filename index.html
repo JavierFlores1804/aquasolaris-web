@@ -506,12 +506,22 @@
           <p class="mono" style="opacity:0.9; font-size:0.85rem; margin:4px 0;" id="dato-banco-nombre" data-i18n="donate_card2_note">Datos de cuenta a confirmar por la asociación</p>
           <p class="mono" style="opacity:0.8; font-size:0.8rem; margin:2px 0;" id="dato-banco-cuenta"></p>
           <p class="mono" style="opacity:0.8; font-size:0.8rem; margin:2px 0;" id="dato-banco-cci"></p>
+          <p class="mono" style="opacity:0.7; font-size:0.75rem; margin:8px 0 0;" id="dato-banco-titular"></p>
         </div>
         <div class="donate-card">
           <h3 data-i18n="donate_card3_t">PayPal</h3>
           <p data-i18n="donate_card3_p">Ideal para donantes internacionales. PayPal cobra una pequeña comisión por transacción, no por uso del servicio.</p>
+          <div style="width:140px; height:140px; background:rgba(255,255,255,0.08); border:1px dashed rgba(255,255,255,0.4); border-radius:6px; margin:14px 0; display:flex; align-items:center; justify-content:center; overflow:hidden;">
+            <img id="qr-paypal" src="images/qr-paypal.png" alt="Código QR de PayPal" style="width:100%; height:100%; object-fit:contain;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div style="display:none; flex-direction:column; align-items:center; gap:4px; padding:10px; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:0.7rem; opacity:0.8;">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM19 14h2v2h-2zM14 19h2v2h-2zM19 19h2v2h-2z"/></svg>
+              <span data-i18n="paypal_qr_pending">Sube tu QR: images/qr-paypal.png</span>
+            </div>
+          </div>
           <p class="mono" style="opacity:0.75; font-size:0.8rem;" data-i18n="paypal_pending">En trámite — disponible próximamente</p>
           <a class="btn" href="#" id="paypal-link" style="border:1.5px solid rgba(255,255,255,0.5); color:var(--paper); opacity:0.7; pointer-events:none;" data-i18n="donate_card3_btn">Próximamente</a>
+          <p class="mono" style="opacity:0.65; font-size:0.72rem; margin-top:10px;" id="dato-paypal-nota" data-i18n="paypal_personal_note">Cuenta a nombre de Aqua Solaris.</p>
+          <a id="wise-link" href="#" target="_blank" rel="noopener" style="display:none; margin-top:10px; font-size:0.8rem; color:var(--sun); text-decoration:underline;" data-i18n="wise_cta">¿Prefieres transferencia internacional con menor comisión? Dona vía Wise →</a>
         </div>
       </div>
       <div class="note-box" data-i18n="donate_note">Nota: los métodos de pago (Yape/Plin, banco, PayPal) no tienen costo de configuración, pero PayPal y las pasarelas de tarjeta cobran una comisión por cada transacción procesada — esto lo determina el proveedor de pago, no la asociación.</div>
@@ -645,6 +655,9 @@
       donate_lead:"Todo aporte se destina íntegramente a los fines de la asociación: el patrimonio de Aqua Solaris es irrepartible y no puede beneficiar directa ni indirectamente a sus asociados.",
       donate_card1_t:"Yape / Plin", donate_card1_p:"Transferencia inmediata desde cualquier billetera móvil peruana. Sin comisión para quien dona.", donate_card1_note:"Titular: Javier Eduardo Flores Velásquez (representante legal)",
       yape_qr_pending:"Sube tu QR: images/qr-yape.png",
+      paypal_qr_pending:"Sube tu QR: images/qr-paypal.png",
+      paypal_personal_note:"Cuenta a nombre de Aqua Solaris.",
+      wise_cta:"¿Prefieres transferencia internacional con menor comisión? Dona vía Wise →",
       donate_card2_t:"Transferencia bancaria", donate_card2_p:"Para donaciones nacionales o internacionales mediante cuenta a nombre de Aqua Solaris.", donate_card2_note:"Datos de cuenta a confirmar por la asociación",
       donate_card3_t:"PayPal", donate_card3_p:"Ideal para donantes internacionales. PayPal cobra una pequeña comisión por transacción, no por uso del servicio.", donate_card3_btn:"Próximamente",
       paypal_pending:"En trámite — disponible próximamente",
@@ -707,6 +720,9 @@
       donate_lead:"Every contribution goes fully toward the association's mission: Aqua Solaris' assets cannot be distributed to, or benefit, its members.",
       donate_card1_t:"Yape / Plin", donate_card1_p:"Instant transfer from any Peruvian mobile wallet. No fee for the donor.", donate_card1_note:"Held by: Javier Eduardo Flores Velásquez (legal representative)",
       yape_qr_pending:"Upload your QR: images/qr-yape.png",
+      paypal_qr_pending:"Upload your QR: images/qr-paypal.png",
+      paypal_personal_note:"Account held in the name of Aqua Solaris.",
+      wise_cta:"Prefer an international transfer with lower fees? Donate via Wise →",
       donate_card2_t:"Bank transfer", donate_card2_p:"For domestic or international donations to an account held by Aqua Solaris.", donate_card2_note:"Account details to be confirmed by the association",
       donate_card3_t:"PayPal", donate_card3_p:"Ideal for international donors. PayPal charges a small fee per transaction, not for using the service.", donate_card3_btn:"Coming soon",
       paypal_pending:"In progress — available soon",
@@ -759,10 +775,12 @@
     const bNombre = document.getElementById('dato-banco-nombre');
     const bCuenta = document.getElementById('dato-banco-cuenta');
     const bCci = document.getElementById('dato-banco-cci');
+    const bTitular = document.getElementById('dato-banco-titular');
     if(d.donaciones.banco_nombre && bNombre){
-      bNombre.textContent = 'Banco: ' + d.donaciones.banco_nombre + ' · Titular: Aqua Solaris';
+      bNombre.textContent = 'Banco: ' + d.donaciones.banco_nombre;
       if(bCuenta) bCuenta.textContent = 'Cuenta: ' + (d.donaciones.banco_cuenta || '—');
       if(bCci) bCci.textContent = 'CCI: ' + (d.donaciones.banco_cci || '—');
+      if(bTitular) bTitular.textContent = 'Titular: ' + (d.donaciones.banco_titular || '—');
     }
 
     // PayPal
@@ -775,6 +793,15 @@
       pp.style.background = 'var(--sun)';
       pp.style.color = 'var(--water-deep)';
       pp.textContent = document.documentElement.lang === 'en' ? 'Donate via PayPal' : 'Donar por PayPal';
+      const ppPending = document.getElementById('paypal-link').previousElementSibling;
+      if(ppPending) ppPending.style.display = 'none';
+    }
+
+    // Wise (opcional)
+    const wise = document.getElementById('wise-link');
+    if(wise && d.donaciones.wise_link){
+      wise.href = d.donaciones.wise_link;
+      wise.style.display = 'inline-block';
     }
 
     // Redes sociales
