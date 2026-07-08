@@ -478,6 +478,26 @@
         </div>
       </div>
       <p class="mono" style="opacity:0.7; font-size:0.8rem; margin-top:26px;" data-i18n="trans_note">Fuente: Estatuto de Aqua Solaris, inscrito en SUNARP, Partida N.º 15856006.</p>
+
+      <div style="margin-top:50px;">
+        <span class="kicker" data-i18n="board_kicker">Gobernanza</span>
+        <h3 style="margin-top:6px; color:var(--paper);" data-i18n="board_title">Consejo Directivo (2025–2029)</h3>
+        <p style="max-width:60ch; opacity:0.9;" data-i18n="board_lead">Las decisiones no dependen de una sola persona: el estatuto exige un consejo de tres miembros, elegido en la Asamblea General de fundación.</p>
+        <div class="activity-grid" style="margin-top:24px; grid-template-columns:repeat(3,1fr);">
+          <div class="activity-card">
+            <h3 style="color:var(--sun); font-size:0.95rem;" data-i18n="board_role1">Presidente</h3>
+            <p>Javier Eduardo Flores Velásquez</p>
+          </div>
+          <div class="activity-card">
+            <h3 style="color:var(--sun); font-size:0.95rem;" data-i18n="board_role2">Secretaria de Actas</h3>
+            <p>Margarita Isabel Flores Velásquez</p>
+          </div>
+          <div class="activity-card">
+            <h3 style="color:var(--sun); font-size:0.95rem;" data-i18n="board_role3">Secretaria de Economía</h3>
+            <p>Angela Verónica Flores Velásquez</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -567,7 +587,7 @@
             <span data-i18n="social_whatsapp">WhatsApp</span>
           </a>
         </div>
-        <p class="mono" style="opacity:0.7; font-size:0.82rem; margin-top:14px;" data-i18n="social_note">Enlaces a completar con tus cuentas reales.</p>
+        <p class="mono" style="opacity:0.7; font-size:0.82rem; margin-top:14px;" id="social-note" data-i18n="social_note">Enlaces a completar con tus cuentas reales.</p>
       </div>
     </div>
   </section>
@@ -651,6 +671,9 @@
       trans1:"Capacitaciones organizadas por la asociación.", trans2:"Publicaciones que difunden el trabajo de la asociación.",
       trans3:"Identificación, formulación y evaluación social de proyectos de saneamiento.", trans4:"Talleres de higiene y salud diseñados a medida para las comunidades.",
       trans_note:"Fuente: Estatuto de Aqua Solaris, inscrito en SUNARP, Partida N.º 15856006.",
+      board_kicker:"Gobernanza", board_title:"Consejo Directivo (2025–2029)",
+      board_lead:"Las decisiones no dependen de una sola persona: el estatuto exige un consejo de tres miembros, elegido en la Asamblea General de fundación.",
+      board_role1:"Presidente", board_role2:"Secretaria de Actas", board_role3:"Secretaria de Economía",
       donate_kicker:"Apoya nuestra misión", donate_title:"Cómo donar",
       donate_lead:"Todo aporte se destina íntegramente a los fines de la asociación: el patrimonio de Aqua Solaris es irrepartible y no puede beneficiar directa ni indirectamente a sus asociados.",
       donate_card1_t:"Yape / Plin", donate_card1_p:"Transferencia inmediata desde cualquier billetera móvil peruana. Sin comisión para quien dona.", donate_card1_note:"Titular: Javier Eduardo Flores Velásquez (representante legal)",
@@ -716,6 +739,9 @@
       trans1:"Trainings and workshops organized by the association.", trans2:"Publications that share the association's work.",
       trans3:"Identification, design and social evaluation of sanitation projects.", trans4:"Hygiene and health workshops tailored to each community.",
       trans_note:"Source: Aqua Solaris bylaws, registered with SUNARP, Entry No. 15856006.",
+      board_kicker:"Governance", board_title:"Governing Board (2025–2029)",
+      board_lead:"Decisions don't rest on one person: the bylaws require a three-member board, elected at the founding General Assembly.",
+      board_role1:"President", board_role2:"Secretary of Minutes", board_role3:"Secretary of Finance",
       donate_kicker:"Support our mission", donate_title:"How to donate",
       donate_lead:"Every contribution goes fully toward the association's mission: Aqua Solaris' assets cannot be distributed to, or benefit, its members.",
       donate_card1_t:"Yape / Plin", donate_card1_p:"Instant transfer from any Peruvian mobile wallet. No fee for the donor.", donate_card1_note:"Held by: Javier Eduardo Flores Velásquez (legal representative)",
@@ -814,6 +840,11 @@
         link.style.opacity = '0.45';
       }
     });
+    const socialNote = document.getElementById('social-note');
+    if(socialNote){
+      const allFilled = ['tiktok','instagram','facebook','youtube'].every(function(net){ return !!redes[net]; });
+      if(allFilled) socialNote.style.display = 'none';
+    }
   }
   applyDatos();
 </script>
